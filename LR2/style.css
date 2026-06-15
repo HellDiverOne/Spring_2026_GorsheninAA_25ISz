@@ -1,0 +1,361 @@
+/* ==========================================
+   ОБЩИЕ СТИЛИ, ШРИФТЫ И СЕТКА САЙТА
+   ========================================== */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Шапка сайта */
+.site-header {
+    background: linear-gradient(135deg, #2c3e50, #000000);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid #b38f4d;
+}
+.site-logo {
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 2px;
+    color: #dfb76c;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+.site-subtitle {
+    color: #bdc3c7;
+    font-style: italic;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Навигация и контейнер вкладок */
+.tabs {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.tabs > input[type="radio"] {
+    display: none;
+}
+
+/* Переключатели вкладок */
+.tabs > label {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #2a2a2a;
+    color: #aaa;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+.tabs > label:hover {
+    background: #3a3a3a;
+    color: #fff;
+}
+
+/* Общий контейнер контента */
+.tab-content {
+    display: none;
+    padding: 35px;
+    background: #222222;
+    border: 1px solid #333;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* Логика показа контента */
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3 {
+    display: block;
+}
+
+/* Активное состояние кнопок */
+#tab-btn-1:checked + label { background: #8e7037; color: white; border-color: #8e7037; }
+#tab-btn-2:checked + label { background: #34495e; color: white; border-color: #34495e; }
+#tab-btn-3:checked + label { background: #c0392b; color: white; border-color: #c0392b; }
+
+/* Элементы заголовков в контенте */
+.era-title {
+    font-size: 28px;
+    margin-top: 0;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+#content-1 .era-title { color: #dfb76c; }
+#content-2 .era-title { color: #5dade2; }
+#content-3 .era-title { color: #e74c3c; }
+
+.era-description {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   СТИЛИ ДЛЯ ВКЛАДКИ 1: ЗАРОЖДЕНИЕ
+   ========================================== */
+.alert-box-retro {
+    background-color: #2c2519;
+    border-left: 5px solid #dfb76c;
+    color: #ddc59d;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.timeline-wrapper {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.timeline-step {
+    padding: 5px 0;
+    border-bottom: 1px dashed #333;
+    font-size: 14px;
+}
+.timeline-step:last-child { border: none; }
+.timeline-step strong { color: #dfb76c; }
+
+.historical-quote {
+    background: #1e1e1e;
+    border-left: 3px solid #777;
+    padding: 15px;
+    margin: 25px 0;
+    font-style: italic;
+}
+.historical-quote cite {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #888;
+    margin-top: 5px;
+}
+.styled-list {
+    padding-left: 20px;
+    color: #ccc;
+}
+.styled-list li { margin-bottom: 8px; }
+
+.specs-table-container {
+    overflow-x: auto;
+    margin: 25px 0;
+}
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1c1c1c;
+}
+.specs-table th, .specs-table td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: left;
+    font-size: 14px;
+}
+.specs-table th { background-color: #2c2c2c; color: #dfb76c; }
+
+.badge-row { margin: 20px 0; }
+.history-badge {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+    text-transform: uppercase;
+}
+.badge-wood { background: #5c4033; color: #e6c2a4; }
+.badge-brass { background: #b5a642; color: #fff; }
+.badge-iron { background: #4a4a4a; color: #ddd; }
+
+.interactive-info-box {
+    background: #252525;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #3a3a3a;
+}
+
+/* ==========================================
+   СТИЛИ ДЛЯ ВКЛАДКИ 2: ЗОЛОТОЙ ВЕК
+   ========================================== */
+.luxury-banner {
+    background: #1b2631;
+    color: #85c1e9;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.gallery-card {
+    background: #2e4053;
+    padding: 15px;
+    border-radius: 6px;
+    border-top: 4px solid #5dade2;
+}
+.gallery-card h4 { margin: 0 0 10px 0; color: #fff; }
+.gallery-card p { margin: 0; font-size: 13px; color: #ccd1d1; }
+
+.infographic-box {
+    background: #1c2833;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.info-metric {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f4d03f;
+    display: block;
+}
+.info-text { margin: 5px 0 0 0; font-size: 14px; }
+
+.tech-fieldset {
+    border: 1px solid #5dade2;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+.tech-fieldset legend {
+    color: #5dade2;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.ordered-tech-list { margin: 0; padding-left: 20px; font-size: 14px;}
+.ordered-tech-list li { margin-bottom: 8px; }
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: fit-content;
+}
+.indicator-dot {
+    width: 100px; height: 10px; width: 10px;
+    border-radius: 50%;
+}
+.pulse-amber {
+    background-color: #f39c12;
+    box-shadow: 0 0 8px #f39c12;
+}
+.indicator-text { font-size: 12px; color: #aaa; }
+.footnote { font-size: 11px; color: #7f8c8d; font-style: italic; }
+
+/* ==========================================
+   СТИЛИ ДЛЯ ВКЛАДКИ 3: МУСКУЛ-КАРЫ
+   ========================================== */
+.danger-banner {
+    background: #7b241c;
+    color: #fadbd8;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.muscle-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.stat-pill {
+    background: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #e74c3c;
+    color: #fff;
+}
+.power-meter-container { margin-bottom: 25px; }
+.meter-title { font-size: 14px; display: block; margin-bottom: 5px; }
+.meter-bar { background: #444; border-radius: 4px; overflow: hidden; }
+.meter-fill {
+    background: #e74c3c;
+    width: 90%;
+    padding: 4px 10px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.recipe-card {
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-right: 6px solid #e67e22;
+}
+.recipe-card h5 { margin: 0 0 10px 0; font-size: 16px; color: #f39c12; }
+.recipe-step { margin: 5px 0; font-size: 14px; color: #ecf0f1; }
+
+.quiz-container {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+.quiz-container h6 { margin: 0 0 10px 0; font-size: 15px; color: #fff; }
+.form-label-text { font-size: 13px; display: block; margin-bottom: 8px; color: #bbb;}
+.quiz-form { display: flex; gap: 10px; }
+.retro-input {
+    flex: 1;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+.retro-input:focus { border-color: #e74c3c; outline: none; }
+.retro-submit-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.retro-submit-btn:hover { background: #c0392b; }
+
+.crisis-card {
+    background: #281816;
+    border: 1px solid #7b241c;
+    padding: 15px;
+    border-radius: 6px;
+}
+.crisis-title { margin: 0 0 5px 0; font-weight: bold; color: #e74c3c; }
+.crisis-desc { margin: 0; font-size: 13px; color: #ccc; }
+
+.tab-footer {
+    margin-top: 35px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
